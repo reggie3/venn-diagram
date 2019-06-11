@@ -1,0 +1,39 @@
+:root {
+    --circle-radius: 100px;
+    --circle-diameter: calc(var(--circle-radius) * 2);
+    --circle-half-radius: calc(var(--circle-radius) / 2);
+  }
+  
+  #vennContainer{
+    position: static;
+    background-color: aliceblue;
+    width: calc(var(--circle-radius) * 3 + 10px);
+    height: calc(var(--circle-radius) * 3 + 10px);
+   
+    border: 1px solid dodgerblue
+  }
+  
+  .vennCircle{
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    border-radius: 50%;
+    opacity: .5;
+    border: 3px solid black;
+  }
+  
+  .red{
+    position: relative;
+    background-color: red;
+    left: var(--circle-radius);
+  }
+  .green{
+    position: relative;
+    background-color: green;
+    right:  var(--circle-radius);
+  }
+  .blue{
+    position: relative;
+    background-color: blue;
+    top:  var(--circle-radius);
+    left: var(--circle-half-radius);
+  }
